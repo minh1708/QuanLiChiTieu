@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.group5.R;
 import com.example.group5.activity.DanhMucActivity;
+import com.example.group5.activity.HuongDanActivity;
 import com.example.group5.activity.ViTienActivity;
 import com.example.group5.database.AppViewModel;
 import com.example.group5.mdel.LoaiTienTe;
@@ -34,6 +35,8 @@ public class CaiDatFragment extends Fragment implements View.OnClickListener {
     private LiveData<LoaiTienTe> tienTeLiveData;
     private RelativeLayout rlLoaiTienTe;
     private TextView txtLoaiTienTe;
+    //Hướng dẫn sử dụng
+    private TextView txtHuongDan;
 
     @Nullable
     @org.jetbrains.annotations.Nullable
@@ -59,7 +62,9 @@ public class CaiDatFragment extends Fragment implements View.OnClickListener {
                 txtLoaiTienTe.setText(loaiTienTe.getName());
             }
         });
-
+        //Hướng dẫn sử dụng
+        txtHuongDan = view.findViewById(R.id.txtHuongDan);
+        txtHuongDan.setOnClickListener(this);
         return view;
     }
 
@@ -75,6 +80,8 @@ public class CaiDatFragment extends Fragment implements View.OnClickListener {
             case R.id.rlLoaiTienTe:
                 showBottomSheetLoaiTienTe();
                 break;
+            case R.id.txtHuongDan:
+                startActivity(new Intent(getActivity(), HuongDanActivity.class));
         }
     }
 

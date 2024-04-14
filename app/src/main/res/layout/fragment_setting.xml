@@ -58,12 +58,25 @@
                 android:id="@+id/txtDanhMuc"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/background_line"
                 android:drawablePadding="10dp"
                 android:gravity="center_vertical"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:text="Danh mục"
+                app:drawableEndCompat="@drawable/ic_right"
+                app:drawableStartCompat="@drawable/ic_danhmuc"
+                app:drawableTint="@color/color_icon_checked" />
+
+            <TextView
+                android:id="@+id/txtHuongDan"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/background_line"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="Hướng dẫn sử dụng"
                 app:drawableEndCompat="@drawable/ic_right"
                 app:drawableStartCompat="@drawable/ic_danhmuc"
                 app:drawableTint="@color/color_icon_checked" />
